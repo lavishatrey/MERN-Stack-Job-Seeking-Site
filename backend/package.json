@@ -21,6 +21,7 @@
     "express-fileupload": "^1.4.3",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3",
+    "path": "^0.12.7",
     "validator": "^13.11.0"
   }
 }

@@ -109,7 +109,7 @@ const PostJob = () => {
                   MEAN STACK Development
                 </option>
                 <option value="MEVN Stack Development">
-                  MERN STACK Development
+                  MEVN STACK Development
                 </option>
                 <option value="Data Entry Operator">Data Entry Operator</option>
               </select>
