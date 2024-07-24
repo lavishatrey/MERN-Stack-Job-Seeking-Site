@@ -17,7 +17,7 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/job/getmyjobs",
+          "https://backend-pqq7.onrender.com/api/v1/job/getmyjobs",
           { withCredentials: true }
         );
         setMyJobs(data.myJobs);
@@ -47,9 +47,13 @@ const MyJobs = () => {
   const handleUpdateJob = async (jobId) => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     await axios
-      .put(`http://localhost:4000/api/v1/job/update/${jobId}`, updatedJob, {
-        withCredentials: true,
-      })
+      .put(
+        `https://backend-pqq7.onrender.com/api/v1/job/update/${jobId}`,
+        updatedJob,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         toast.success(res.data.message);
         setEditingMode(null);
@@ -62,7 +66,7 @@ const MyJobs = () => {
   //Function For Deleting Job
   const handleDeleteJob = async (jobId) => {
     await axios
-      .delete(`http://localhost:4000/api/v1/job/delete/${jobId}`, {
+      .delete(`https://backend-pqq7.onrender.com/api/v1/job/delete/${jobId}`, {
         withCredentials: true,
       })
       .then((res) => {

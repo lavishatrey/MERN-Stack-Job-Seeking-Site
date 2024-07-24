@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/user/login",
+        "https://backend-pqq7.onrender.com/api/v1/user/login",
         { email, password, role },
         {
           headers: {
@@ -37,8 +37,8 @@ const Login = () => {
     }
   };
 
-  if(isAuthorized){
-    return <Navigate to={'/'}/>
+  if (isAuthorized) {
+    return <Navigate to={"/"} />;
   }
 
   return (
