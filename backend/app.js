@@ -14,9 +14,8 @@ dotenv.config({ path: "./config/config.env" });
 dbConnection();
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
-    method: ["GET", "POST", "DELETE", "PUT"],
-    credentials: true,
+    origin: '*', // Allows all origins
+    credentials: true, // Allows cookies and other credentials to be included
   })
 );
 
